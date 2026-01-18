@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="main" style="display: flex"></div>
+    <script type="text/babel">
+
+        const testStyle = {
+            alignItems: "center",
+            flexDirection: "column",
+            backgroundColor: "#f0f0f0",
+             gap: "16px",
+            border: "1px solid #ccc",
+            textAlign: "center",
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById("main"));
+        root.render(
+           
+                <div class="card" style={testStyle}>
+                    <img src="https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/u/n/underworld4.jpg" alt="Harry Poter Book Cover" style={{ maxWidth: "200px", borderRadius: "4px" }}></img>
+                    <h1>Resident Evil: The book</h1>
+                    <p>1997 Год издания</p>
+                    <p>Автор: Стефани Данель Перри</p>
+                    <p>Жанр: Выживальческий хоррор, боевик</p>
+                </div>
+                           
+        );
+    </script>
+</body>
+
+</html>

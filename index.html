@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +7,142 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
 
-<body>
-    <div id="main" style="display: flex"></div>
     <script type="text/babel">
 
-        const testStyle = {
-            alignItems: "center",
-            flexDirection: "column",
-            backgroundColor: "#f0f0f0",
-             gap: "16px",
-            border: "1px solid #ccc",
-            textAlign: "center",
-        };
+    function Header() 
+    {
+        const headerStyle={
+          display:'flex',
+          alignItems:'center',
+          gap:'10px',
+          borderBottom:'2px solid black',
+          paddingBottom:'10px',
+          backgroundColor:'lightgray',
+          width:'100%',
+          boxShadow: '0 4px 8px rgba(0, 2, 0, 96)'
+        }
 
-        const root = ReactDOM.createRoot(document.getElementById("main"));
-        root.render(
-           
-                <div class="card" style={testStyle}>
-                    <img src="https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/u/n/underworld4.jpg" alt="Harry Poter Book Cover" style={{ maxWidth: "200px", borderRadius: "4px" }}></img>
-                    <h1>Resident Evil: The book</h1>
-                    <p>1997 Год издания</p>
-                    <p>Автор: Стефани Данель Перри</p>
-                    <p>Жанр: Выживальческий хоррор, боевик</p>
-                </div>
-                           
-        );
+
+       return <div style={headerStyle}>
+                <img src="" alt=""></img>
+                  <h1>UltraShop</h1>
+               </div>
+    }
+    function Main() 
+    {
+        const mainStyle={
+          display:'flex',
+          flexDirection:'row',
+          gap:'20px',
+          backgroundColor:'gray',
+          minHeight:'800px',
+          padding:'20px',
+        }
+
+        return <div style={mainStyle}>
+                  <Menu/>
+                  <div style={{flex: 1}}>
+                    <h2>Welcome to UltraShop</h2>
+                    <p>Here is our catalog:</p>
+                    <div style={{display:'flex', flexWrap:'wrap', gap:'20px', justifyContent:'center'}}>
+                      <Card1/>
+                      <Card2/>
+                    </div>
+                  </div>
+               </div>
+        function Card1() 
+    {
+        const cardStyle={
+          display:'flex',
+          flexDirection:'column',
+          alignItems:'center',
+          backgroundColor:'white',
+          border:'1px solid black',
+          borderRadius:'10px',
+          padding:'10px',
+          margin:'10px',
+          width:'200px',
+        }
+
+        return <div style={cardStyle}>
+                  <img src="https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/u/n/underworld4.jpg" alt="Resident Evil Book Cover" style={{ maxWidth: "150px", borderRadius: "4px" }}></img>
+                  <h3>Resident Evil: The book</h3>
+                  <p>1997 Год издания</p>
+                  <p>Автор: Стефани Данель Перри</p>
+                  <p>Жанр: Выживальческий хоррор, боевик</p>
+               </div>
+    }
+    }    
+    
+    function Card2() 
+    {
+        const cardStyle={
+          display:'flex',
+          flexDirection:'column',
+          alignItems:'center',
+          backgroundColor:'white',
+          border:'1px solid black',
+          borderRadius:'10px',
+          padding:'10px',
+          margin:'10px',
+          width:'200px',
+        }
+
+        return <div style={cardStyle}>
+                  <img src="https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/u/n/underworld4.jpg" alt="Resident Evil Book Cover" style={{ maxWidth: "150px", borderRadius: "4px" }}></img>
+                  <h3>Resident Evil: The book</h3>
+                  <p>1997 Год издания</p>
+                  <p>Автор: Стефани Данель Перри</p>
+                  <p>Жанр: Выживальческий хоррор, боевик</p>
+               </div>
+    }
+    function Footer() 
+    {
+
+    }         
+    function Menu() 
+    {
+        const menuStyle={
+            display:'flex',
+            flexDirection:'column',
+            backgroundColor:'lightgray',
+            padding:'10px',
+            minWidth:'150px',
+            boxShadow: '0 4px 8px rgba(0, 2, 0, 96)',
+            borderRadius: '5px',
+            gap: '10px'
+        }
+
+        return <div style={menuStyle}>
+                  <h3>Menu</h3>
+                  <a href="#" style={{textDecoration: 'none', color: 'black', }}>Home</a>
+                  <a href="#" style={{textDecoration: 'none', color: 'black', }}>Catalog</a>
+                  <a href="#" style={{textDecoration: 'none', color: 'black', }}>About us</a>
+                  <a href="#" style={{textDecoration: 'none', color: 'black', }}>Contacts</a>
+               </div>
+    }
+    
+   </script>
+
+</head>
+<body>
+
+    <script type="text/babel">      
+
+        let div = document.querySelector("body"); 
+        const root = ReactDOM.createRoot(div); 
+        root.render( 
+        <>        
+        <Header/>
+        <Main/>
+        <Footer/>
+        </>        
+        );   
+    
     </script>
+    
 </body>
-
 </html>
+<!-- Пришлось долго разбираться как правльно запихнуть карточки в мейн, и обратился к ИИ. Но в итоге оно работает, и по той же схеме засунул меню. Теперь всё работает -->
+<!-- Кстати я вам даже писал на счет этой проблемы, но мне автоответчик мягко обьяснил что мне не стоит вас тревожить)) Сам разобрался -->

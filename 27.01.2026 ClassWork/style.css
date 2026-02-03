@@ -1,0 +1,175 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 20px;
+}
+
+#container > div {
+    border: 1px solid #ddd;
+    padding: 15px;
+    /* border-radius: 8px; */
+    text-align: center;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 15px;
+    /* border-radius: 8px; */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.star-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px !important;
+    height: 25px;
+    margin: 0;
+}
+
+#container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cart-icon {
+    width: 30px !important;
+    height: 30px !important;
+    margin-top: 10px;
+    
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.card-info div {
+    text-align: left;
+    flex: 1;
+}
+
+.card-info p {
+    margin: 0 0 5px 0;
+}
+
+.card-info h3 {
+    margin: 0;
+    color: #ff0000;
+    font-size: 18px;
+}
+
+.delivery {
+    font-size: 12px;
+    color: #27ae60;
+    margin: 5px 0 0 0;
+}
+
+.delivery-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.smart-delivery {
+    width: 50px !important;
+    height: 25px !important;
+    margin-left: 50px  !important;
+}
+
+.smartdelivery {
+    font-size: 12px;
+    color: #2980b9;
+    width: 30px;
+}
+
+
+
+/* Breakpoints: 1200 , 992 , 600 , 360 */
+
+@media (max-width: 1200px) {
+    #container > div {
+        width: 25%; 
+    }
+}
+
+@media (max-width: 992px) {
+    #container > div {
+        width: 33.3333%; 
+    }
+}
+
+@media (max-width: 600px) {
+    #container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #container > div {
+        width: 50%; 
+        padding: 10px;
+    }
+
+    .star-icon {
+        width: 22px !important;
+        height: 22px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .cart-icon {
+        width: 26px !important;
+        height: 26px !important;
+    }
+
+    .card-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .card-info h3 {
+        font-size: 16px;
+    }
+
+    .delivery {
+        font-size: 11px;
+    }
+
+    .smartdelivery {
+        width: auto;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    #container > div {
+        width: 100%; 
+    }
+
+    #container {
+        padding: 8px;
+    }
+
+    .star-icon {
+        width: 20px !important;
+        height: 20px;
+    }
+
+    .cart-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/babel">
+
+      
+        function Card1(props)
+        {
+         return <div className="card">
+            <img src="star.png" alt="star" className="star-icon" />
+            <img src={props.img} alt={props.name} />
+            <div className="card-info">
+                <div>
+                    <p>{props.name}</p>
+                    <h3>{props.costs}</h3>
+                    <div className="delivery-section">
+                        <p className="delivery">{props.delivery}</p>
+                        <img src="smart.jpg" alt="smartdelivery" className="smart-delivery" />
+                    </div>
+                </div>
+                <img src="15278.png" alt="Корзина" className="cart-icon" />
+            </div>
+         </div>
+        }
+        function CardGroup()
+        {
+            return <div id="container">
+                 <Card1 img="1.jpg" name="Lenovo" costs="19 799 грн" delivery="Безкоштовна доставка" />
+                 <Card1 img="shopping.webp" name="asus rog" costs="129 900 грн" delivery="Безкоштовна доставка"  />
+                 <Card1 img="asustuf.webp" name="Asus tuf 15A" costs="79 799 грн" delivery="Безкоштовна доставка"   />
+                 <Card1 img="macbook.jpg" name="Macbook pro M2" costs="132 999 грн" delivery="Безкоштовна доставка"  />
+                 <Card1 img="1.jpg" name="Lenovo" costs="1599 грн" delivery="Безкоштовна доставка"  />
+                 <Card1 img="1.jpg" name="Lenovo" costs="899 грн" delivery="Безкоштовна доставка"  />
+                 <Card1 img="1.jpg" name="Lenovo" costs="1599 грн" delivery="Безкоштовна доставка"  />
+                 <Card1 img="1.jpg" name="Lenovo" costs="899 грн" delivery="Безкоштовна доставка"  />
+                 <Card1 img="1.jpg" name="Lenovo" costs="1599 грн" delivery="Безкоштовна доставка"  />
+                 <Card1 img="1.jpg" name="Lenovo" costs="899 грн" delivery="Безкоштовна доставка"  />
+                </div>
+        }   
+
+    </script>
+</head>
+
+<body>  
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        ReactDOM.createRoot(document.getElementById("root"))
+            .render(
+                <div>
+                    <CardGroup/>
+                </div>
+            );
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
